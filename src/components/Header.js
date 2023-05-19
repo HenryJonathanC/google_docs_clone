@@ -54,7 +54,7 @@ const Header = () => {
                 <svg className='w-4 ml-1' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512" id="down-arrow"><path d="M98.9 184.7l1.8 2.1 136 156.5c4.6 5.3 11.5 8.6 19.2 8.6 7.7 0 14.6-3.4 19.2-8.6L411 187.1l2.3-2.6c1.7-2.5 2.7-5.5 2.7-8.7 0-8.7-7.4-15.8-16.6-15.8H112.6c-9.2 0-16.6 7.1-16.6 15.8 0 3.3 1.1 6.4 2.9 8.9z"></path></svg>
             </div>
             <button onClick={showModal} className='ml-6 flex items-center justify-center px-3 py-2 bg-sharebtn rounded-3xl w-28 h-10'><svg className='w-5 mr-2' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="lock"><path d="M12,13a1,1,0,0,0-1,1v3a1,1,0,0,0,2,0V14A1,1,0,0,0,12,13Zm5-4V7A5,5,0,0,0,7,7V9a3,3,0,0,0-3,3v7a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V12A3,3,0,0,0,17,9ZM9,7a3,3,0,0,1,6,0V9H9Zm9,12a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1H17a1,1,0,0,1,1,1Z"></path></svg> Share</button>
-            <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null} closable={false}>
+            <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null} closable={false}> {/* this modal feature is used from ant design */}
                 <div className='flex items-center justify-between'>
                     <h1 className='text-2xl'>Share "new title"</h1>
                     <div className='flex items-center'>

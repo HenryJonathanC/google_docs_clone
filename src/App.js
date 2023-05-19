@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import TextEditor from './components/TextEditor';
-import Toolbar from './components/Toolbar';
+// import Toolbar from './components/Toolbar';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <Header /> {/* Top most header navbar which contains the doc name and other options along with share feature */}
          {/* <Toolbar /> toolbar just below the header navbar which contains different text formatting options  */}
         </div>
-        <TextEditor />  {/* component in which the library Quill is used to enable the functionalities of a text editor */}
+        <TextEditor />  {/* component in which the library Quill is used to enable the functionalities of a text editor as well as the toolbar for different text formatting options*/}
       </div>
       <div style={{flex: '.035'}} className='mt-2'>
         <Sidebar /> {/* the sidebar that includes links to other Google apps */}
