@@ -1,5 +1,8 @@
 import { Modal } from 'antd';
 import React, { useState } from 'react'
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import DriveFileMoveOutlinedIcon from '@mui/icons-material/DriveFileMoveOutlined';
+import CloudDoneOutlinedIcon from '@mui/icons-material/CloudDoneOutlined';
 
 const Header = () => {
 
@@ -24,15 +27,18 @@ const Header = () => {
     }
 
   return (
-    <div className='flex mx-5 p-2 h-10 justify-between items-center bg-headerbg'>
+    <div className='pt-4 flex mx-5 p-2 h-10 justify-between items-center bg-headerbg'>
         <div className='flex'>
             <img className='mt-4 w-9 h-9 cursor-pointer' src='https://cdn-icons-png.flaticon.com/512/5968/5968517.png' alt=''/>
             <div className='mt-2'>
                 <div className='flex items-center'>
                     <input value={title} onChange={e=>setTitle(e.target.value)} className='text-lg ml-2 opacity-80' />
-                    <svg className='ml-1 hoverEffect rounded-full p-1' xmlns="http://www.w3.org/2000/svg" width="24" height="24" enableBackground="new 0 0 512 512" viewBox="0 0 512 512" id="star"><path stroke='black' d="M114.336,482.397c-1.485,0.001-2.971-0.458-4.233-1.375c-2.528-1.837-3.583-5.095-2.612-8.065l53.062-162.206L22.248,210.685c-2.531-1.832-3.593-5.088-2.627-8.06c0.964-2.968,3.729-4.977,6.849-4.977c0.004,0,0.009,0,0.013,0l170.709,0.307l52.4-162.425c0.96-2.975,3.728-4.99,6.853-4.99c3.125-0.001,5.894,2.015,6.854,4.988l52.444,162.427l170.711-0.307c0.004,0,0.009,0,0.013,0c3.12,0,5.885,2.009,6.85,4.977c0.965,2.972-0.097,6.228-2.628,8.06L352.385,310.751l53.063,162.206c0.972,2.971-0.083,6.229-2.611,8.065c-2.529,1.838-5.952,1.834-8.478-0.008L256.447,380.412L118.581,481.014C117.316,481.937,115.826,482.397,114.336,482.397z M256.447,364.296c1.49,0,2.979,0.461,4.245,1.383l124.13,90.55l-47.76-145.993c-0.974-2.976,0.087-6.239,2.623-8.074l124.489-90.07l-153.656,0.276c-0.004,0-0.009,0-0.013,0c-3.124,0.001-5.894-2.015-6.853-4.988L256.45,61.188l-47.163,146.188c-0.96,2.975-3.729,4.99-6.854,4.99c-0.004,0-0.008,0-0.013,0l-153.656-0.276l124.489,90.07c2.536,1.835,3.596,5.099,2.623,8.074L128.12,456.224l124.082-90.544C253.466,364.757,254.957,364.296,256.447,364.296z"></path></svg>
-                    <img style={{padding: '.1rem'}} className='w-6 ml-2 hoverEffect opacity-70 rounded-full' src='https://cdn1.iconfinder.com/data/icons/folders-lineal-1/32/folder-document-file-arrow-right-512.png' alt=''/>
-                    <img style={{padding: '.1rem'}} className='ml-2 w-6 hoverEffect rounded-full' alt='' src='https://img.icons8.com/?size=512&id=30475&format=png' />
+                    <StarBorderIcon style={{padding: '.1rem'}} className='ml-1 hoverEffect opacity-80 rounded-full' />
+                    <DriveFileMoveOutlinedIcon style={{padding: '.1rem'}} className='w-6 ml-2 hoverEffect opacity-80 rounded-full' />
+                    <CloudDoneOutlinedIcon style={{padding: '.1rem'}} className='ml-2 w-6 hoverEffect opacity-80 rounded-full' />
+                    {/* <svg className='ml-1 hoverEffect rounded-full p-1' xmlns="http://www.w3.org/2000/svg" width="24" height="24" enableBackground="new 0 0 512 512" viewBox="0 0 512 512" id="star"><path stroke='black' d="M114.336,482.397c-1.485,0.001-2.971-0.458-4.233-1.375c-2.528-1.837-3.583-5.095-2.612-8.065l53.062-162.206L22.248,210.685c-2.531-1.832-3.593-5.088-2.627-8.06c0.964-2.968,3.729-4.977,6.849-4.977c0.004,0,0.009,0,0.013,0l170.709,0.307l52.4-162.425c0.96-2.975,3.728-4.99,6.853-4.99c3.125-0.001,5.894,2.015,6.854,4.988l52.444,162.427l170.711-0.307c0.004,0,0.009,0,0.013,0c3.12,0,5.885,2.009,6.85,4.977c0.965,2.972-0.097,6.228-2.628,8.06L352.385,310.751l53.063,162.206c0.972,2.971-0.083,6.229-2.611,8.065c-2.529,1.838-5.952,1.834-8.478-0.008L256.447,380.412L118.581,481.014C117.316,481.937,115.826,482.397,114.336,482.397z M256.447,364.296c1.49,0,2.979,0.461,4.245,1.383l124.13,90.55l-47.76-145.993c-0.974-2.976,0.087-6.239,2.623-8.074l124.489-90.07l-153.656,0.276c-0.004,0-0.009,0-0.013,0c-3.124,0.001-5.894-2.015-6.853-4.988L256.45,61.188l-47.163,146.188c-0.96,2.975-3.729,4.99-6.854,4.99c-0.004,0-0.008,0-0.013,0l-153.656-0.276l124.489,90.07c2.536,1.835,3.596,5.099,2.623,8.074L128.12,456.224l124.082-90.544C253.466,364.757,254.957,364.296,256.447,364.296z"></path></svg> */}
+                    {/* <img style={{padding: '.1rem'}} className='w-6 ml-2 hoverEffect opacity-70 rounded-full' src='https://cdn1.iconfinder.com/data/icons/folders-lineal-1/32/folder-document-file-arrow-right-512.png' alt=''/> */}
+                    {/* <img style={{padding: '.1rem'}} className='ml-2 w-6 hoverEffect rounded-full' alt='' src='https://img.icons8.com/?size=512&id=30475&format=png' /> */}
                 </div>
                 <div className='flex ml-2'>
                     <h2 className='hoverEffect rounded-md px-2 text-sm'>File</h2>
